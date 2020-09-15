@@ -1,14 +1,20 @@
 <template>
   <div id="app">
-    <div id="tab-bar">
-      <div class="tab-bar-item">首页</div>
-      <div class="tab-bar-item">分类</div>
-      <div class="tab-bar-item">购物车</div>
-      <div class="tab-bar-item">我的</div>
-    </div>
+    <router-view></router-view>
+    <main-tab-bar></main-tab-bar>
   </div>
 </template>
 
+<script>
+  import MainTabBar from "@/components/content/mainTabbar/MainTabBar";
+  export default {
+    name: 'App',
+    components: {
+      MainTabBar
+    }
+  }
+</script>
+
 <style lang="scss">
-  @import 'assets/sass/base.scss'
+  @import 'assets/scss/base.scss';
 </style>
